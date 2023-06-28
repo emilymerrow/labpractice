@@ -215,3 +215,69 @@ console.log('js is loaded')
 const person = {
     name: 'Em'
 }
+
+onsole.log('js file is loaded'); // <- I look for this message in the chrome console to confirm
+// this javascript file is being executed
+
+
+// We have some app, and after a person logs in, 
+// we want to display a Welcome message.
+
+// after the login 
+
+let loggedInUserName = 'brad';
+// chatroom 
+// store all the users in the chatroom
+const chatRoomUsers = [];
+
+
+// Write a function that takes in a username,
+// Capitalizes the first letter,
+// and then adds the username to the chatRoomUsers array!
+function addUserToChatRoom(username){
+	// capitalize the first letter 
+	// const capitalizedUsername = capitalizeFirstLetter(username)
+	// return chatRoomUsers.unshift(capitalizedUsername)
+
+	// or adding a user to the beginning of the array!
+	chatRoomUsers.unshift(capitalizeFirstLetter(username))
+
+}
+
+
+// People are logging in to the chat room
+addUserToChatRoom('brad');
+addUserToChatRoom('kate');
+addUserToChatRoom('julia');
+addUserToChatRoom('stever');
+
+console.log(chatRoomUsers)
+
+
+// write a function that uses takes a username, and returns a welcome message
+
+// defining the function
+function setWelcomeMessage(username){
+	return `Welcome ${username}`
+}
+
+console.log(setWelcomeMessage(loggedInUserName), " <-  setWelcomeMessage");
+
+// function expression
+
+const setLoggedInUser = function(username){
+	loggedInUserName = capitalizeFirstLetter(username);
+	console.log(loggedInUserName, " <--- loggedInUsername")
+}
+
+console.log(setLoggedInUser('jimmmmm'), " <--- setLoggedInUser");
+
+
+// Write a function that will take in a name and return the name with the first letter capitalized, 
+// and everything else lowercase
+function capitalizeFirstLetter(username) {
+		// grab the first letter and uppercase it, and add it to the rest of the word after index 0
+    return username.charAt(0).toUpperCase() + username.slice(1).toLowerCase();
+}
+
+// How to capitalize the first letter in a string in javascript?
