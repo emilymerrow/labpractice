@@ -3,6 +3,7 @@ const person = {
 	isOnline: false
 }
 
+//when a user logs in we want to add the user to a list of loggedUsers, 
 
 function setOnlineStatus(user){
 	user.isOnline = !user.isOnline; // ! operator flips booleans, true to false, false to true
