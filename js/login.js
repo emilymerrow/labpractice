@@ -1,6 +1,6 @@
 const person = {
 	name: 'Jim',
-	isOnline: false
+	isOnline: false;
 }
 
 //when a user logs in we want to add the user to a list of loggedUsers, 
